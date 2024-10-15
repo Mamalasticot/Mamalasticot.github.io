@@ -1,1 +1,1 @@
-It is a test for website.
+It is a test for a public website.
