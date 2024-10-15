@@ -1,0 +1,43 @@
+/** Pour l'encadré de rubrique **/
+
+.encadre_rubrique .plyr {
+	min-width: 0;
+}
+
+.encadre_rubrique .plyr__controls--right {
+	float: none;
+}
+
+/** Pour l'édition de formulaires **/
+
+.zone_element .plyr {
+	margin-right: 1em;
+}
+
+/* Cf. KDECOLEN3-11218 */
+
+.plyr__play-large {
+	cursor: pointer;
+}
+
+/* Correctif pour ticket https://cst.kosmos.fr/browse/KDECOLEN3-11226
+ *
+ * Ce correctif est temporaire en l'attente de l'évolution du player,
+ * suite aux 2 issues :
+ * https://github.com/Selz/plyr/issues/210
+ * et
+ * https://github.com/Selz/plyr/issues/212
+ *
+*/
+
+.wysiwyg_media--video {
+	overflow: hidden;
+}
+
+/* Fin correctif KDECOLEN3-11226 */
+
+/* Pour le player "light" */
+.plyr--audio .plyr__controls--light {
+	border: none;
+	padding: initial;
+}
