@@ -1,0 +1,12 @@
+body {
+    color: black;
+    font-size: 30px; /* Taille du texte */
+    line-height: 0; /* Ajuste l'interligne */
+}
+p {
+    font-weight: bold;
+    font-family: "Consolas", monospace; /* Police d'ecriture */
+    font-size: 11px; /* Taille du texte */
+    font-weight: normal; /* Style Regular */
+    line-height: 0.2; /* Ajuste l'interligne */
+}
