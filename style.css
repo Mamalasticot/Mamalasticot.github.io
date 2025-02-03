@@ -13,5 +13,9 @@ p {
 }
 
 #img_patates {
-    width: 300px;
+    width: 200px;
+}
+
+h5 {
+    line-height: 0; /* Ajuste l'interligne */
 }
