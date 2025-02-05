@@ -368,7 +368,7 @@
         const form = document.getElementById('validerAuth');
 
         // Soumission du formulaire
-        validerAuth.addEventListener('submit', async (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault(); // Empêcher la soumission par défaut du formulaire
 
             // Récupérer les valeurs des champs
@@ -384,7 +384,7 @@
                 });
 
                 alert("Données envoyées avec succès !");
-                validerAuth.reset(); // Réinitialiser le formulaire
+                form.reset(); // Réinitialiser le formulaire
             } catch (e) {
                 console.error("Erreur lors de l'enregistrement : ", e);
             }
