@@ -31,9 +31,11 @@ a {
     text-decoration: none;
     color: #0077cc;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: transform 0.3s ease, color 0.3s;
+    display: inline-block; /* Permet au zoom de fonctionner correctement */
 }
 
 a:hover {
     color: #005599;
+    transform: scale(1.1); /* Agrandit légèrement le lien */
 }
