@@ -1,41 +1,48 @@
-/* Importer une police Google Fonts */
+/* Importer une police Google Fonts pour une meilleure esthétique */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
 
+/* Appliquer un style général au corps de la page */
 body {
-    font-family: 'Raleway', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
-    margin: 0;
-    padding: 20px;
+    font-family: 'Raleway', sans-serif; /* Utiliser la police Raleway */
+    background-color: #f4f4f4; /* Couleur de fond gris clair */
+    color: #333; /* Couleur du texte en gris foncé */
+    text-align: center; /* Centrer le texte */
+    margin: 0; /* Supprimer les marges par défaut */
+    padding: 20px; /* Ajouter un léger espacement intérieur */
 }
 
+/* Style du titre principal */
 h1 {
-    color: #0077cc;
+    color: #0077cc; /* Bleu vif pour attirer l'attention */
 }
 
+/* Style des paragraphes */
 p {
-    font-size: 18px;
+    font-size: 18px; /* Taille du texte légèrement agrandie pour une meilleure lisibilité */
 }
 
+/* Supprimer les puces des listes non ordonnées */
 ul {
     list-style: none;
     padding: 0;
 }
 
+/* Espacement entre chaque élément de liste */
 li {
     margin: 10px 0;
 }
 
+/* Style des liens */
 a {
-    text-decoration: none;
-    color: #0077cc;
-    font-weight: bold;
-    transition: transform 0.3s ease, color 0.3s;
-    display: inline-block; /* Permet au zoom de fonctionner correctement */
+    text-decoration: none; /* Supprimer le soulignement des liens */
+    color: #0077cc; /* Bleu vif pour correspondre au titre */
+    font-weight: bold; /* Mettre en gras */
+    transition: transform 0.3s ease, color 0.3s; /* Ajouter une transition fluide sur la couleur et l'effet de zoom */
+    display: inline-block; /* Permet d'appliquer correctement l'effet de zoom */
 }
 
+/* Effet au survol des liens */
 a:hover {
-    color: #005599;
-    transform: scale(1.1); /* Agrandit légèrement le lien */
+    color: #005599; /* Assombrir légèrement la couleur au survol */
+    transform: scale(1.1); /* Agrandir légèrement le lien (zoom x1.1) */
 }
