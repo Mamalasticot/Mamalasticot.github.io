@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire simple</title>
+    <title>Formulaire avec Firebase</title>
 </head>
 <body>
 
     <h1>Formulaire</h1>
 
-    <form action="#" method="post">
+    <form id="form">
         <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom" required><br><br>
 
@@ -18,6 +18,54 @@
 
         <button type="submit">Envoyer</button>
     </form>
+
+    <!-- Ajouter les scripts Firebase ici -->
+    <script type="module">
+        // Importer les fonctions nécessaires depuis les SDK Firebase
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js"; // Importer Firestore
+
+        // Configuration de ton application Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyCVHnsdS8x_G1zgBTtbI8VWt-dS8zjEJK0",
+            authDomain: "formulaire-1c830.firebaseapp.com",
+            projectId: "formulaire-1c830",
+            storageBucket: "formulaire-1c830.firebasestorage.app",
+            messagingSenderId: "816659541029",
+            appId: "1:816659541029:web:af09abafd0b9c66faea3cc",
+            measurementId: "G-CK3ZM2Y39V"
+        };
+
+        // Initialisation de Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app); // Initialisation de Firestore
+
+        // Récupération du formulaire
+        const form = document.getElementById('form');
+
+        // Soumission du formulaire
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Empêcher la soumission par défaut du formulaire
+
+            // Récupérer les valeurs des champs
+            const nom = document.getElementById('nom').value;
+            const prenom = document.getElementById('prenom').value;
+
+            try {
+                // Enregistrer les données dans Firestore
+                await addDoc(collection(db, "utilisateurs"), {
+                    nom: nom,
+                    prenom: prenom
+                });
+
+                alert("Données envoyées avec succès !");
+                form.reset(); // Réinitialiser le formulaire
+            } catch (e) {
+                console.error("Erreur lors de l'enregistrement : ", e);
+            }
+        });
+    </script>
 
 </body>
 </html>
