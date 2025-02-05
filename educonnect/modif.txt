@@ -1,0 +1,1 @@
+Suppression ligne 141 :" action="https://educonnect.education.gouv.fr/idp/profile/SAML2/POST/SSO?execution=e1s1" method="post" onsubmit="return checkLoginMdp()""
